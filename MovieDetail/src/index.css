@@ -80,6 +80,7 @@ button:focus-visible {
   width: 300px;
   height: 450px;
   border-radius: 30px;
+  object-fit: cover;
 }
 
 .box{
@@ -114,4 +115,51 @@ button:focus-visible {
   width: 300px;
   height: 40px;
   border-radius: 10px;
+}
+.filmTitle{
+  color: white;
+  font-size: 0.8em;
+  width: 300px;
+}
+
+.section{
+  display: flex;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+.sectinDiv1{
+  width: 30%;
+}
+
+.sectionImg{
+  border-radius: 20px 0 0 20px;
+  height: 100%  ;
+  width: 100%;
+}
+.sectionDiv2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2d2d;
+  border-radius: 0 20px  20px 0;
+  padding: 20px;
+  width: 70%;
+
+}
+
+.sectionUl{
+  display: flex;
+  gap: 100px;
+  list-style: none;
+}
+
+.sectionP{
+  color: gray;
+  font-size: 0.8em;
+}
+
+.section2{
+  display: flex;
+  gap: 50px;
 }

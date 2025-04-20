@@ -8,16 +8,17 @@ export default function MovieList({movies}) {
         {movies.length>0 ?
                 movies.map((film)=>{
                     return(
-                        <Link  to={`/movies/{}`} key={film.imdbID}>
+                        <Link  to={`/movies/${film.imdbID}`} key={film.imdbID}>
                             <div className='filmBox'>
                                 <img 
                                     className='img'
-                                    src={film.Poster ? film.Poster : "https://t3.ftcdn.net/jpg/08/30/64/70/360_F_830647061_m02NGMtYotrjinuMU9RcAMuijUZX1k07.jpg"}
+                                    src={film.Poster =="N/A" ? "https://t3.ftcdn.net/jpg/08/30/64/70/360_F_830647061_m02NGMtYotrjinuMU9RcAMuijUZX1k07.jpg": film.Poster  }
                                     alt="filmimg" />
+                                    <h3 className='filmTitle'>{film.Title}</h3>
                                 <div className='box'>
-                                    <p>{film.Title}</p>
-                                    <span>*</span>
                                     <p>{film.Year}</p>
+                                    <span>*</span>
+                                    <p>{film.Type == "movie" ? "Фильм" : 'Сериал'}</p>
                                 </div>
                             </div>
                         </Link>
