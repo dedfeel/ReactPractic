@@ -3,17 +3,16 @@ import ListContext from './Context'
 
 export default function List() {
     let {state , dispatch} = useContext(ListContext)
-    let [editId, setEditId] = useState(null)    // қайсы өңделіп жатыр
-    let [newText, setNewText] = useState('')    // жаңа текст
-
+    let [editId, setEditId] = useState(null)    
+    let [newText, setNewText] = useState('')    
     let handleEdit = (todo) => {
         setEditId(todo.id)
-        setNewText(todo.list_add)   // ескі текст input ішіне түседі
+        setNewText(todo.list_add)   
     }
 
     let handleSave = () => {
         dispatch({ type: 'edit_todo', payload: { id: editId, newText } })
-        setEditId(null)   // өңдеуді тоқтатамыз
+        setEditId(null)   
         setNewText('')
     }
 
